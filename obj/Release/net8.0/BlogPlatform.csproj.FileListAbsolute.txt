@@ -1,0 +1,8 @@
+C:\Users\daniel.braggs\BlogPlatform\obj\Release\net8.0\BlogPlatform.csproj.AssemblyReference.cache
+C:\Users\daniel.braggs\BlogPlatform\obj\Release\net8.0\BlogPlatform.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\daniel.braggs\BlogPlatform\obj\Release\net8.0\BlogPlatform.AssemblyInfoInputs.cache
+C:\Users\daniel.braggs\BlogPlatform\obj\Release\net8.0\BlogPlatform.AssemblyInfo.cs
+C:\Users\daniel.braggs\BlogPlatform\obj\Release\net8.0\BlogPlatform.csproj.CoreCompileInputs.cache
+C:\Users\daniel.braggs\BlogPlatform\obj\Release\net8.0\BlogPlatform.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\daniel.braggs\BlogPlatform\obj\Release\net8.0\BlogPlatform.RazorAssemblyInfo.cache
+C:\Users\daniel.braggs\BlogPlatform\obj\Release\net8.0\BlogPlatform.RazorAssemblyInfo.cs

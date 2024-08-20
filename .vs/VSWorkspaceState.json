@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\bin\\Debug",
+    "\\bin\\Debug\\net8.0",
+    "\\Controllers",
+    "\\Models",
+    "\\Views",
+    "\\Views\\Blog"
+  ],
+  "SelectedNode": "\\bin\\Debug\\net8.0\\example.log",
+  "PreviewInSolutionExplorer": false
+}

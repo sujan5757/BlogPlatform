@@ -1,0 +1,156 @@
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlatform.csproj.AssemblyReference.cache
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlatform.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlatform.AssemblyInfoInputs.cache
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlatform.AssemblyInfo.cs
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlatform.csproj.CoreCompileInputs.cache
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlatform.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlatform.RazorAssemblyInfo.cache
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlatform.RazorAssemblyInfo.cs
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\appsettings.json
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\BlogPlatform.staticwebassets.runtime.json
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\BlogPlatform.exe
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\BlogPlatform.deps.json
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\BlogPlatform.runtimeconfig.json
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\BlogPlatform.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\BlogPlatform.pdb
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Humanizer.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\staticwebassets\msbuild.BlogPlatform.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\staticwebassets\msbuild.build.BlogPlatform.props
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.BlogPlatform.props
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BlogPlatform.props
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\scopedcss\bundle\BlogPlatform.styles.css
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\scopedcss\projectbundle\BlogPlatform.bundle.scp.css
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlat.DA64CEF9.Up2Date
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlatform.dll
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\refint\BlogPlatform.dll
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlatform.pdb
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\BlogPlatform.genruntimeconfig.cache
+C:\Users\daniel.braggs\BlogPlatform\obj\Debug\net8.0\ref\BlogPlatform.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\log4net.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+C:\Users\daniel.braggs\BlogPlatform\bin\Debug\net8.0\log4net.config
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\log4net.config
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\appsettings.json
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\BlogPlatform.staticwebassets.runtime.json
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\BlogPlatform.exe
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\BlogPlatform.deps.json
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\BlogPlatform.runtimeconfig.json
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\BlogPlatform.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\BlogPlatform.pdb
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Humanizer.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\log4net.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlatform.csproj.AssemblyReference.cache
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlatform.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlatform.AssemblyInfoInputs.cache
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlatform.AssemblyInfo.cs
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlatform.csproj.CoreCompileInputs.cache
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlatform.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlatform.RazorAssemblyInfo.cache
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlatform.RazorAssemblyInfo.cs
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\staticwebassets\msbuild.BlogPlatform.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\staticwebassets\msbuild.build.BlogPlatform.props
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.BlogPlatform.props
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BlogPlatform.props
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\scopedcss\bundle\BlogPlatform.styles.css
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\scopedcss\projectbundle\BlogPlatform.bundle.scp.css
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlat.DA64CEF9.Up2Date
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlatform.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\refint\BlogPlatform.dll
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlatform.pdb
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\BlogPlatform.genruntimeconfig.cache
+C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform\obj\Debug\net8.0\ref\BlogPlatform.dll

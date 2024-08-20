@@ -1,0 +1,102 @@
+@model List<Blog>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    @* <div class="container">
+        @if (ViewBag.UserID != null)
+{
+    <div>
+        <strong>User ID:</strong> @ViewBag.UserID
+    </div>
+} *@
+
+        <a href="@Url.Action("Create", "Blog")">Create</a>
+        <div>
+                    <a href="~/User/Login"> <button>LogOut</button> </a>
+        </div>
+        <h2>Blog List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Author</th>
+                    <th>Edit Your BLog</th>
+                    <th>Delete Your Blog</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var blog in Model)
+                {
+                    <tr>
+                        <td>@blog.Id</td>
+                        <td>@blog.Title</td>
+                        <td>@blog.Content</td>
+                        <td>@blog.UserID</td>
+                        <td><a href="~/Blog/Update/@blog.Id">Update</a></td>
+                        <td><a href="~/Blog/Delete/@blog.Id">Delete</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

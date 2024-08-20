@@ -1,0 +1,684 @@
+2024-08-09 16:50:45,881  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 16:50:45,919  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 16:50:45,922  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 16:50:45,924  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\daniel.braggs\BlogPlatform
+ 2024-08-09 16:50:59,417  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 17:17:03,478  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (47ms) [Parameters=[@__user_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RegistrationDate], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0
+ 2024-08-09 17:17:26,122  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (7ms) [Parameters=[@__user_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RegistrationDate], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0
+ 2024-08-09 17:17:26,370  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (13ms) [Parameters=[@__userIdString_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[UserID] = @__userIdString_0
+ 2024-08-09 17:17:36,219  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Blogs] ([Content], [Title], [UserID])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+ 2024-08-09 17:17:36,240 ERROR Microsoft.EntityFrameworkCore.Update.? [(null)] [?] - MESSAGE: An exception occurred in the database while saving changes for context type 'BlogPlatform.Models.BlogDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'EveriProductMngDb.dbo.Blogs', column 'Title'. Truncated value: 'dfsdfsdfdsfdfdsfdfsd'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:60d20dc5-8efc-49d8-8f52-c845305235a0
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'EveriProductMngDb.dbo.Blogs', column 'Title'. Truncated value: 'dfsdfsdfdsfdfdsfdfsd'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:60d20dc5-8efc-49d8-8f52-c845305235a0
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2024-08-09 17:17:36,267 ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.? [(null)] [?] - MESSAGE: An unhandled exception has occurred while executing the request.
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'EveriProductMngDb.dbo.Blogs', column 'Title'. Truncated value: 'dfsdfsdfdsfdfdsfdfsd'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:60d20dc5-8efc-49d8-8f52-c845305235a0
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at BlogPlatform.Controllers.BlogController.Create(Blog blog) in C:\Users\daniel.braggs\BlogPlatform\Controllers\BlogController.cs:line 68
+   at lambda_method135(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-09 17:23:17,455  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Application is shutting down...
+ 2024-08-09 17:23:21,648  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 17:23:21,682  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 17:23:21,684  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 17:23:21,685  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\daniel.braggs\BlogPlatform
+ 2024-08-09 17:23:31,503  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 17:23:46,256  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (45ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 20), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Blogs] ([Content], [Title], [UserID])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+ 2024-08-09 17:23:46,698  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[@__userIdString_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[UserID] = @__userIdString_0
+ 2024-08-09 17:23:50,919  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[Id] = @__p_0
+ 2024-08-09 17:23:50,946  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Blogs]
+OUTPUT 1
+WHERE [Id] = @p0;
+ 2024-08-09 17:23:50,974  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__userIdString_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[UserID] = @__userIdString_0
+ 2024-08-09 17:53:54,178  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Application is shutting down...
+ 2024-08-09 17:54:01,280  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 17:54:01,318  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 17:54:01,320  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 17:54:01,321  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\daniel.braggs\BlogPlatform
+ 2024-08-09 17:54:24,520  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 17:54:25,888  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (53ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Blogs] ([Content], [Title], [UserID])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+ 2024-08-09 17:54:25,929 ERROR Microsoft.EntityFrameworkCore.Update.? [(null)] [?] - MESSAGE: An exception occurred in the database while saving changes for context type 'BlogPlatform.Models.BlogDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'EveriProductMngDb.dbo.Blogs', column 'Title'. Truncated value: 'dfsdfsdfdsfdfdsfdfsd'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:d541b1c3-09e4-4a29-8854-c42aac0c5185
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'EveriProductMngDb.dbo.Blogs', column 'Title'. Truncated value: 'dfsdfsdfdsfdfdsfdfsd'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:d541b1c3-09e4-4a29-8854-c42aac0c5185
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2024-08-09 17:54:25,963 ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.? [(null)] [?] - MESSAGE: An unhandled exception has occurred while executing the request.
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'EveriProductMngDb.dbo.Blogs', column 'Title'. Truncated value: 'dfsdfsdfdsfdfdsfdfsd'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:d541b1c3-09e4-4a29-8854-c42aac0c5185
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at BlogPlatform.Controllers.BlogController.Create(Blog blog) in C:\Users\daniel.braggs\BlogPlatform\Controllers\BlogController.cs:line 68
+   at lambda_method1(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-09 17:54:29,666  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Application is shutting down...
+ 2024-08-09 18:01:18,500  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 18:01:18,554  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 18:01:18,557  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 18:01:18,557  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\daniel.braggs\BlogPlatform
+ 2024-08-09 18:01:25,888  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 18:01:30,044  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (195ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Blogs] ([Content], [Title], [UserID])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+ 2024-08-09 18:01:30,522 ERROR Microsoft.EntityFrameworkCore.Update.? [(null)] [?] - MESSAGE: An exception occurred in the database while saving changes for context type 'BlogPlatform.Models.BlogDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'EveriProductMngDb.dbo.Blogs', column 'Title'. Truncated value: 'dfsdfsdfdsfdfdsfdfsd'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:61fbf655-dc7f-4043-be0f-521f7b1427e5
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'EveriProductMngDb.dbo.Blogs', column 'Title'. Truncated value: 'dfsdfsdfdsfdfdsfdfsd'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:61fbf655-dc7f-4043-be0f-521f7b1427e5
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2024-08-09 18:01:30,999 ERROR BlogPlatform.Controllers.BlogController.Create [(null)] [72] - MESSAGE: An error occurred while saving the blog. The data might be too large or invalid.
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'EveriProductMngDb.dbo.Blogs', column 'Title'. Truncated value: 'dfsdfsdfdsfdfdsfdfsd'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:61fbf655-dc7f-4043-be0f-521f7b1427e5
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at BlogPlatform.Controllers.BlogController.Create(Blog blog) in C:\Users\daniel.braggs\BlogPlatform\Controllers\BlogController.cs:line 72
+2024-08-09 18:06:45,831  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Application is shutting down...
+ 2024-08-09 18:09:49,501  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 18:09:49,547  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 18:09:49,549  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 18:09:49,550  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\daniel.braggs\BlogPlatform
+ 2024-08-09 18:09:55,844  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 18:42:25,427  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (155ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+ 2024-08-09 18:42:26,102  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (626ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+ 2024-08-09 18:42:26,125  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+ 2024-08-09 18:42:26,149  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+ 2024-08-09 18:42:27,098  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (912ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+ 2024-08-09 18:42:27,128  INFO Microsoft.EntityFrameworkCore.Migrations.? [(null)] [?] - MESSAGE: Applying migration '20240809110237_change'.
+ 2024-08-09 18:42:28,512 ERROR Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Failed executing DbCommand (1,179ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Blogs] (
+    [Id] int NOT NULL IDENTITY,
+    [Title] nvarchar(20) NOT NULL,
+    [Content] nvarchar(max) NOT NULL,
+    [UserID] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Blogs] PRIMARY KEY ([Id])
+);
+ 2024-08-09 18:43:19,338  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+ 2024-08-09 18:43:19,405  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+ 2024-08-09 18:43:19,415  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+ 2024-08-09 18:43:19,422  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+ 2024-08-09 18:43:19,562  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (116ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+ 2024-08-09 18:43:19,584  INFO Microsoft.EntityFrameworkCore.Migrations.? [(null)] [?] - MESSAGE: Applying migration '20240809131308_addedRegiste'.
+ 2024-08-09 18:43:19,763 ERROR Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Failed executing DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Blogs] (
+    [Id] int NOT NULL IDENTITY,
+    [Title] nvarchar(20) NOT NULL,
+    [Content] nvarchar(max) NOT NULL,
+    [UserID] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Blogs] PRIMARY KEY ([Id])
+);
+ 2024-08-09 18:43:29,143 ERROR Microsoft.Extensions.Hosting.Internal.Host.HostedServiceStartupFaulted [(null)] [0] - MESSAGE: Hosting failed to start
+ System.IO.IOException: Failed to bind to address http://127.0.0.1:5008: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-08-09 18:44:12,421  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+ 2024-08-09 18:44:12,485  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+ 2024-08-09 18:44:12,490  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+ 2024-08-09 18:44:12,492  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+ 2024-08-09 18:44:12,516  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+ 2024-08-09 18:44:12,532  INFO Microsoft.EntityFrameworkCore.Migrations.? [(null)] [?] - MESSAGE: Applying migration '20240809131308_addedRegiste'.
+ 2024-08-09 18:44:12,603 ERROR Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Failed executing DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Blogs] (
+    [Id] int NOT NULL IDENTITY,
+    [Title] nvarchar(20) NOT NULL,
+    [Content] nvarchar(max) NOT NULL,
+    [UserID] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Blogs] PRIMARY KEY ([Id])
+);
+ 2024-08-09 18:45:46,473  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+ 2024-08-09 18:45:46,534  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+ 2024-08-09 18:45:46,540  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+ 2024-08-09 18:45:46,543  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+ 2024-08-09 18:45:46,569  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+ 2024-08-09 18:45:46,589  INFO Microsoft.EntityFrameworkCore.Migrations.? [(null)] [?] - MESSAGE: Applying migration '20240809131308_addedRegiste'.
+ 2024-08-09 18:45:46,675 ERROR Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Failed executing DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Blogs] (
+    [Id] int NOT NULL IDENTITY,
+    [Title] nvarchar(20) NOT NULL,
+    [Content] nvarchar(max) NOT NULL,
+    [UserID] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Blogs] PRIMARY KEY ([Id])
+);
+ 2024-08-09 18:48:17,794  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (231ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [EveriProductuy];
+ 2024-08-09 18:48:18,034  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (198ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [EveriProductuy] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+ 2024-08-09 18:48:18,064  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+ 2024-08-09 18:48:18,161  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+ 2024-08-09 18:48:18,165  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+ 2024-08-09 18:48:18,183  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+ 2024-08-09 18:48:18,202  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+ 2024-08-09 18:48:18,218  INFO Microsoft.EntityFrameworkCore.Migrations.? [(null)] [?] - MESSAGE: Applying migration '20240809131805_addedRegiste'.
+ 2024-08-09 18:48:18,274  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Blogs] (
+    [Id] int NOT NULL IDENTITY,
+    [Title] nvarchar(20) NOT NULL,
+    [Content] nvarchar(max) NOT NULL,
+    [UserID] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Blogs] PRIMARY KEY ([Id])
+);
+ 2024-08-09 18:48:18,281  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(15) NOT NULL,
+    [PasswordHash] nvarchar(15) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [RegistrationDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+ 2024-08-09 18:48:18,343  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (61ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Content', N'Title', N'UserID') AND [object_id] = OBJECT_ID(N'[Blogs]'))
+    SET IDENTITY_INSERT [Blogs] ON;
+INSERT INTO [Blogs] ([Id], [Content], [Title], [UserID])
+VALUES (1, N'This was Good', N'Summer season', N'Wilson1'),
+(2, N'This was Good', N'Winter season', N'Wilson1'),
+(3, N'This was Good', N'React', N'Sujan1'),
+(4, N'This was Good', N'Angular', N'Sujan1'),
+(5, N'This was Good', N'C#', N'Daniel1'),
+(6, N'This was Good', N'.NET', N'Daniel1');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Content', N'Title', N'UserID') AND [object_id] = OBJECT_ID(N'[Blogs]'))
+    SET IDENTITY_INSERT [Blogs] OFF;
+ 2024-08-09 18:48:18,348  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240809131805_addedRegiste', N'7.0.0');
+ 2024-08-09 18:48:27,572  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 18:48:27,625  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 18:48:27,627  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 18:48:27,628  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform
+ 2024-08-09 18:48:48,751  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Application is shutting down...
+ 2024-08-09 18:48:54,313  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 18:48:54,382  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 18:48:54,384  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 18:48:54,386  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform
+ 2024-08-09 18:49:36,433  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 18:52:52,951  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 18:52:53,000  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 18:52:53,003  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 18:52:53,004  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform
+ 2024-08-09 18:54:10,302  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 18:57:27,751  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Application is shutting down...
+ 2024-08-09 18:57:33,497  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 18:57:33,547  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 18:57:33,550  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 18:57:33,552  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform
+ 2024-08-09 18:57:38,256  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 18:58:27,042  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Application is shutting down...
+ 2024-08-09 18:58:34,396  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 18:58:34,494  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 18:58:34,500  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 18:58:34,501  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform
+ 2024-08-09 18:58:39,709  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 18:58:52,925  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Application is shutting down...
+ 2024-08-09 18:59:00,516  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 18:59:00,568  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 18:59:00,571  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 18:59:00,572  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform
+ 2024-08-09 18:59:06,027  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 18:59:16,325  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Application is shutting down...
+ 2024-08-09 18:59:22,333  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 18:59:22,430  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 18:59:22,433  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 18:59:22,434  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform
+ 2024-08-09 18:59:25,402  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 18:59:59,744  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (58ms) [Parameters=[@__user_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RegistrationDate], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0
+ 2024-08-09 19:00:00,065  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 15), @p2='?' (DbType = DateTime2), @p3='?' (Size = 15)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [PasswordHash], [RegistrationDate], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+ 2024-08-09 19:00:00,144  WARN Microsoft.AspNetCore.Mvc.ViewFeatures.CookieTempDataProvider.? [(null)] [?] - MESSAGE: The temp data cookie .AspNetCore.Mvc.CookieTempDataProvider could not be loaded.
+ System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.CookieTempDataProvider.LoadTempData(HttpContext context)
+2024-08-09 19:00:00,289  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (21ms) [Parameters=[@__userIdString_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[UserID] = @__userIdString_0
+ 2024-08-09 19:00:40,150  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Application is shutting down...
+ 2024-08-09 19:00:46,100  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 19:00:46,152  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 19:00:46,155  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 19:00:46,156  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform
+ 2024-08-09 19:00:48,664  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 2024-08-09 19:01:07,920  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (63ms) [Parameters=[@__user_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RegistrationDate], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0
+ 2024-08-09 19:01:08,164  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 15), @p2='?' (DbType = DateTime2), @p3='?' (Size = 15)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [PasswordHash], [RegistrationDate], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+ 2024-08-09 19:01:08,278  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (3ms) [Parameters=[@__userIdString_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[UserID] = @__userIdString_0
+ 2024-08-09 19:01:30,711  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 20), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Blogs] ([Content], [Title], [UserID])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+ 2024-08-09 19:01:30,739  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__userIdString_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[UserID] = @__userIdString_0
+ 2024-08-09 19:01:48,672  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 20), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Blogs] ([Content], [Title], [UserID])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+ 2024-08-09 19:01:48,753  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__userIdString_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[UserID] = @__userIdString_0
+ 2024-08-09 19:02:32,234  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 20), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Blogs] ([Content], [Title], [UserID])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+ 2024-08-09 19:02:32,373  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (120ms) [Parameters=[@__userIdString_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[UserID] = @__userIdString_0
+ 2024-08-09 19:02:37,479  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[Id] = @__p_0
+ 2024-08-09 19:02:44,986  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[Id] = @__p_0
+ 2024-08-09 19:02:45,086  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (87ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 20)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Blogs] SET [Title] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+ 2024-08-09 19:02:45,212  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[@__userIdString_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[UserID] = @__userIdString_0
+ 2024-08-09 19:02:51,022  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[Id] = @__p_0
+ 2024-08-09 19:02:51,055  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Blogs]
+OUTPUT 1
+WHERE [Id] = @p0;
+ 2024-08-09 19:02:51,082  INFO Microsoft.EntityFrameworkCore.Database.Command.? [(null)] [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__userIdString_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Content], [b].[Title], [b].[UserID]
+FROM [Blogs] AS [b]
+WHERE [b].[UserID] = @__userIdString_0
+ 2024-08-09 19:06:20,311  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Application is shutting down...
+ 2024-08-09 19:06:26,675  INFO Microsoft.Hosting.Lifetime.? [(null)] [?] - MESSAGE: Now listening on: http://localhost:5008
+ 2024-08-09 19:06:26,732  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2024-08-09 19:06:26,735  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [(null)] [0] - MESSAGE: Hosting environment: Development
+ 2024-08-09 19:06:26,736  INFO Microsoft.Hosting.Lifetime.Invoke [(null)] [0] - MESSAGE: Content root path: C:\Users\sujan.ps\OneDrive - Everi Payments, Inc\Documents\BlogPlatform
+ 2024-08-09 19:06:30,209  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [(null)] [?] - MESSAGE: Failed to determine the https port for redirect.
+ 
